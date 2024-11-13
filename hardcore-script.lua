@@ -1,6 +1,6 @@
 coroutine.wrap(function()
     while true do
-        wait(math.random(3, 24))
+        wait(math.random(35, 324))
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 if workspace:FindFirstChild("SeekMoving") == nil and game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 50 then
         wait(1.5)
