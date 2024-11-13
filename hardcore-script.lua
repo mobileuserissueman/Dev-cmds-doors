@@ -1,7 +1,10 @@
 coroutine.wrap(function()
     while true do
-        wait(math.random(75, 170))
+        wait(math.random(1, 12))
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 if workspace:FindFirstChild("SeekMoving") == nil and game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 50 then
         wait(1.5)
-loadstring(game:HttpGet("
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mobileuserissueman/Dev-cmds-doors/refs/heads/main/Source-shocker.lua"))()
+end
+    end
+end)()
