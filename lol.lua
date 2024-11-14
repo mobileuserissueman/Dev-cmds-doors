@@ -5,6 +5,6 @@ game.Players.PlayerAdded:Connect(function(player)
 
         if message == "/ripper" then
           loadstring(game:HttpGet("https://raw.githubusercontent.com/mobileuserissueman/Dev-cmds-doors/refs/heads/main/Source-Ripper.lua"))()
-        	end
+        end
       end)
   end)
