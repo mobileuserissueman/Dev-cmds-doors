@@ -117,7 +117,7 @@ achievementGiver({
     Title = "The Surge",
     Desc = "The Surge has begun.",
     Reason = "Encounter Surge",
-    Image = "rbxassetid://11278229132"
+    Image = "rbxassetid://12627342204"
 })
 end)
 
