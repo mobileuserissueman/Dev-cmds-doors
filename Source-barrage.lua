@@ -12,7 +12,7 @@ local entity = spawner.Create({
 	},
 	Lights = {
 		Flicker = {
-			Enabled = true,
+			Enabled = false,
 			Duration = 1
 		},
 		Shatter = true,
@@ -27,15 +27,15 @@ local entity = spawner.Create({
 		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 100,
+		Speed = 10000,
 		Delay = 2,
 		Reversed = false
 	},
 	Rebounding = {
 		Enabled = true,
 		Type = "Ambush", -- "Blitz"
-		Min = 1,
-		Max = 3,
+		Min = 5,
+		Max = 7,
 		Delay = 2
 	},
 	Damage = {
@@ -51,7 +51,7 @@ local entity = spawner.Create({
 	},
 	Death = {
 		Type = "Guiding", -- "Curious"
-		Hints = {"Death", "Hints", "Go", "Here"},
+		Hints = {"You died to Barrage.", "An earthquake will happen when they spawn in.", "They rebound a lot of times", "Hide in a closet until you know it's done rebounding."},
 		Cause = ""
 	}
 })
