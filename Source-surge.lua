@@ -1,4 +1,4 @@
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(0, 0, 180)
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(0, 180, 0)
 game.Lighting.MainColorCorrection.Contrast = 0.3
 local tween = game:GetService("TweenService")
 tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(10), {Contrast = 0}):Play()
@@ -55,7 +55,7 @@ local entity = spawner.Create({
 	Damage = {
 		Enabled = true,
 		Range = 30,
-		Amount = 10
+		Amount = 200
 	},
 	Crucifixion = {
 		Enabled = true,
