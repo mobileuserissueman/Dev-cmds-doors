@@ -1,3 +1,17 @@
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(0, 0, 180)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(10), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(12),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camara = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+	camara.CFrame = camara.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4)
 ---====== Load spawner ======---
 
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
@@ -51,7 +65,7 @@ local entity = spawner.Create({
 	},
 	Death = {
 		Type = "Guiding", -- "Curious"
-		Hints = {"You died to who you call Surge.", "When they spawn in, it's the ngl.", "Have no idea what this does.", "Better luck next time!", "See ya!"},
+		Hints = {"You died to who you call Surge.", "When they start rushing, the lights will turn green.", "They are similar to rush.", "They do not rebound."},
 		Cause = ""
 	}
 })
@@ -95,7 +109,16 @@ entity:SetCallback("OnDespawning", function()
 end)
 
 entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
+    ---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "The Surge",
+    Desc = "The Surge has begun.",
+    Reason = "Encounter Surge",
+    Image = "rbxassetid://11278229132"
+})
 end)
 
 entity:SetCallback("OnDamagePlayer", function(newHealth)
