@@ -105,3 +105,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/mobileuserissueman/De
 end
     end
 end)()
+
+--barrage
+coroutine.wrap(function()
+    while true do
+        wait(math.random(245, 2315))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+if workspace:FindFirstChild("SeekMoving") == nil and game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 50 then
+        wait(1.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mobileuserissueman/Dev-cmds-doors/refs/heads/main/Source-barrage.lua"))()
+end
+    end
+end)()
