@@ -1,3 +1,4 @@
+--shocker
 coroutine.wrap(function()
     while true do
         wait(math.random(35, 324))
@@ -9,6 +10,7 @@ end
     end
 end)()
 
+--ripper
 coroutine.wrap(function()
     while true do
         wait(math.random(75, 213))
@@ -20,6 +22,7 @@ end
     end
 end)()
 
+--rebound
 coroutine.wrap(function()
     while true do
         wait(math.random(240, 520))
@@ -31,6 +34,7 @@ end
     end
 end)()
 
+--overseer eyes
 coroutine.wrap(function()
     while true do
         wait(math.random(24, 79))
@@ -42,6 +46,7 @@ end
     end
 end)()
 
+--claim
 coroutine.wrap(function()
     while true do
         wait(math.random(45, 452))
@@ -53,6 +58,7 @@ end
     end
 end)()
 
+--a-60
 coroutine.wrap(function()
     while true do
         wait(math.random(52, 421))
@@ -64,9 +70,10 @@ end
     end
 end)()
 
+--surge
 coroutine.wrap(function()
     while true do
-        wait(math.random(35, 324))
+        wait(math.random(35, 534))
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 if workspace:FindFirstChild("SeekMoving") == nil and game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 50 then
         wait(1.5)
@@ -75,9 +82,10 @@ end
     end
 end)()
 
+--blitz
 coroutine.wrap(function()
     while true do
-        wait(math.random(35, 324))
+        wait(math.random(35, 451))
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 if workspace:FindFirstChild("SeekMoving") == nil and game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 50 then
         wait(1.5)
