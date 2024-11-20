@@ -117,3 +117,16 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/mobileuserissueman/De
 end
     end
 end)()
+
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Hardcore script (custom)",true)
+wait(3)
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("By me :D",true)
+wait(3)
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credit to RegularVynixu and dripcapybara",true)
+wait(3)
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("it ok rilee, i joy",true)
+wait(3)
